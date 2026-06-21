@@ -21,7 +21,6 @@ Xiaoye Liang<sup>1,2</sup>, Zhiyuan Qu<sup>1</sup>, Mingye Zou<sup>3,2</sup>, Ji
 <p align="center">
   <img src="img/teaser.png" width="95%">
 </p>
-```
 
 
 ---
@@ -189,20 +188,6 @@ VTEdit-Bench supports both distribution-level evaluation and reference-aware sem
 
 ## Results
 
-### VTEdit-QA Overall Scores
-
-Higher is better.
-
-| Method | Type | Shop2Model | Shop2MultiView | Shop2MultiModel | Model2Model | MultiShop2Model |
-|---|---|---:|---:|---:|---:|---:|
-| IDM-VTON | Specialized VTON | 3.60 | 2.73 | 1.65 | - | - |
-| CatVTON | Specialized VTON | 3.39 | 2.14 | 1.26 | **2.25** | - |
-| FastFit | Specialized VTON | 3.08 | 1.74 | 1.18 | - | **2.90** |
-| DreamO | Universal Editor | 1.62 | 0.96 | 0.74 | 0.90 | 0.01 |
-| Qwen-Image-Edit-2511 | Universal Editor | 3.64 | 2.46 | 2.14 | 1.17 | 0.34 |
-| Flux.2 | Universal Editor | 3.36 | 3.38 | 3.02 | 2.06 | 2.25 |
-| Flux.2-klein | Universal Editor | **3.96** | **3.99** | **3.56** | 1.03 | 2.68 |
-
 ### FID/KID Results
 
 Lower FID/KID is better. Lower average rank is better.
@@ -225,6 +210,19 @@ Lower FID/KID is better. Lower average rank is better.
 | DreamO | Universal | 14.91 / 7.74 | 60.54 / 22.89 | 91.66 / 27.31 | 24.62 / 11.38 | 20.53 / 8.94 | 7.4 |
 | Flux.2-klein | Universal | 11.92 / 8.17 | 44.03 / 12.55 | 79.23 / 24.79 | 17.57 / 11.60 | 16.46 / 7.33 | 5.6 |
 
+### VTEdit-QA Overall Scores
+
+Higher is better.
+
+| Method | Type | Shop2Model | Shop2MultiView | Shop2MultiModel | Model2Model | MultiShop2Model |
+|---|---|---:|---:|---:|---:|---:|
+| IDM-VTON | Specialized VTON | 3.60 | 2.73 | 1.65 | - | - |
+| CatVTON | Specialized VTON | 3.39 | 2.14 | 1.26 | **2.25** | - |
+| FastFit | Specialized VTON | 3.08 | 1.74 | 1.18 | - | **2.90** |
+| DreamO | Universal Editor | 1.62 | 0.96 | 0.74 | 0.90 | 0.01 |
+| Qwen-Image-Edit-2511 | Universal Editor | 3.64 | 2.46 | 2.14 | 1.17 | 0.34 |
+| Flux.2 | Universal Editor | 3.36 | 3.38 | 3.02 | 2.06 | 2.25 |
+| Flux.2-klein | Universal Editor | **3.96** | **3.99** | **3.56** | 1.03 | 2.68 |
 ---
 
 ## Citation
