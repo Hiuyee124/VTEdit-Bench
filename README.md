@@ -230,10 +230,10 @@ Higher is better.
 If you find VTEdit-Bench useful in your research, please consider citing:
 
 ```bibtex
-@inproceedings{liang2026vteditbench,
+@article{liang2026vtedit,
   title={VTEdit-Bench: A Comprehensive Benchmark for Multi-Reference Image Editing Models in Virtual Try-On},
   author={Liang, Xiaoye and Qu, Zhiyuan and Zou, Mingye and Liu, Jiaxin and Jiang, Lai and Xu, Mai and Zhu, Yiheng},
-  booktitle={European Conference on Computer Vision},
+  journal={arXiv preprint arXiv:2603.11734},
   year={2026}
 }
 ```
