@@ -111,31 +111,11 @@ VTEdit-bench/
 ├── multishop2model_pairs.txt
 │
 ├── Dresscode/          # DressCode (shop + indoor model images)
-│   ├── upper_body/
-│   ├── lower_body/
-│   └── dresses/
-│
 ├── VITONHD/            # VITON-HD (high-resolution model + garment images)
-│   └── train/
-│
 ├── streetvton/         # StreetVTON (outdoor in-the-wild model images)
-│   ├── image/
-│   ├── annos/
-│   └── streetvton_vitonhd/
-│
 ├── multi_view/         # DeepFashion multi-view sources + DressCode garments
-│   ├── upper_body/
-│   ├── lower_body/
-│   ├── dresses/
-│   └── web/
-│
 ├── multi_human/        # DeepFashion multi-person sources + DressCode garments
-│   ├── image/
-│   └── web/
-│
 ├── dresscodeMR/        # DressCode-MR (multi-reference outfit try-on)
-│   ├── person/
-│   └── references/
 ```
 
 #### Data Source Subfolders
