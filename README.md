@@ -12,7 +12,7 @@ Xiaoye Liang<sup>1,2</sup>, Zhiyuan Qu<sup>1</sup>, Mingye Zou<sup>3,2</sup>, Ji
 <sup>†</sup>Corresponding Author
 
 [![arXiv](https://img.shields.io/badge/arXiv-2603.11734-b31b1b.svg)](https://arxiv.org/abs/2603.11734)
-[![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-green)](TODO)
+[![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-green)](https://drive.google.com/drive/folders/1qXm7TrUULpaR1dLVeD9zekeMR6oiQyjZ?usp=sharing)
 [![License](https://img.shields.io/badge/License-Research%20Only-lightgrey)](LICENSE)
 
 
@@ -95,10 +95,8 @@ For images derived from existing datasets, please download the original data fro
 ### Released Google Drive Package
 
 We provide the benchmark data and pair lists through Google Drive:
-
-**Google Drive:** `Coming soon`
-
-The released package is organized as **one subfolder per data source**, with **five task-level pair list files** at the root. Each `{task}_pairs.txt` specifies how to read the test pairs for the corresponding benchmark task from the subfolders below.
+ [Google Drive](https://drive.google.com/drive/folders/1qXm7TrUULpaR1dLVeD9zekeMR6oiQyjZ?usp=sharing)
+. The released package is organized as **one subfolder per data source**, with **five task-level pair list files** at the root. Each `{task}_pairs.txt` specifies how to read the test pairs for the corresponding benchmark task from the subfolders below.
 
 #### Package Layout
 
