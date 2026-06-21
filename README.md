@@ -126,18 +126,16 @@ VTEdit-bench/
 ├── multi_view/         # DeepFashion multi-view sources + DressCode garments
 │   ├── upper_body/
 │   ├── lower_body/
-│   └── dresses/
+│   ├── dresses/
+│   └── web/
 │
 ├── multi_human/        # DeepFashion multi-person sources + DressCode garments
-│   └── image/
+│   ├── image/
+│   └── web/
 │
 ├── dresscodeMR/        # DressCode-MR (multi-reference outfit try-on)
 │   ├── person/
 │   └── references/
-│
-└── web/                # Web-collected supplementary images
-    ├── multi_view/
-    └── multi_human/
 ```
 
 #### Data Source Subfolders
@@ -147,10 +145,9 @@ VTEdit-bench/
 | **Dresscode/** | [DressCode](https://github.com/aimagelab/dress-code) | Shop and indoor model images for `upper_body`, `lower_body`, and `dresses`; auxiliary conditions (e.g., agnostic masks, cloth masks) where applicable |
 | **VITONHD/** | [VITON-HD](https://github.com/shadow2496/VITON-HD) | High-resolution paired model and garment images under `train/` |
 | **streetvton/** | [StreetVTON](https://github.com/cuiaiyu/street-tryon-benchmark) | Outdoor model images, annotations, and StreetVTON–VITON-HD cross-dataset pairs |
-| **multi_view/** | [DeepFashion](https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) + DressCode | Multi-view human images and corresponding DressCode garment references |
-| **multi_human/** | DeepFashion + DressCode | Multi-person human images and corresponding DressCode garment references |
+| **multi_view/** | [DeepFashion](https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) + DressCode + web supplement | Multi-view human images, corresponding DressCode garment references, and web-collected models under `web/` |
+| **multi_human/** | DeepFashion + DressCode + web supplement | Multi-person human images, corresponding DressCode garment references, and web-collected models under `web/` |
 | **dresscodeMR/** | [DressCode-MR](https://huggingface.co/datasets/zhengchong/DressCode-MR) | Person images, multi-item reference garments, and task-specific annotations |
-| **web/** | Web supplement | Additional human images collected from the web for multi-view and multi-person tasks |
 
 > **Note:** For images derived from public datasets, please also download the original data from the official sources listed above when required.
 
@@ -161,12 +158,12 @@ Each root-level `{task}_pairs.txt` is the entry point for loading test pairs of 
 | Task | Pair List | Involved Data Sources |
 |---|---|---|
 | **Shop2Model** | `shop2model_pairs.txt` | Dresscode, VITONHD, streetvton |
-| **Shop2MultiView** | `shop2multiview_pairs.txt` | multi_view, Dresscode, web |
-| **Shop2MultiModel** | `shop2multimodel_pairs.txt` | multi_human, Dresscode, web |
+| **Shop2MultiView** | `shop2multiview_pairs.txt` | multi_view, Dresscode |
+| **Shop2MultiModel** | `shop2multimodel_pairs.txt` | multi_human, Dresscode |
 | **Model2Model** | `model2model_pairs.txt` | VITONHD, streetvton |
 | **MultiShop2Model** | `multishop2model_pairs.txt` | dresscodeMR |
 
-For most tasks, each line in a pair list contains two paths separated by whitespace (**garment/cloth first, model/person second**). Paths are relative to the `VTEdit-bench/` package root. For **MultiShop2Model**, each line lists all reference garment paths first, followed by the target person path. Web-collected model images use sequential filenames under task-specific subfolders, e.g. `web/multi_view/0001.png` for Shop2MultiView and `web/multi_human/0001.png` for Shop2MultiModel.
+For most tasks, each line in a pair list contains two paths separated by whitespace (**garment/cloth first, model/person second**). Paths are relative to the `VTEdit-bench/` package root. For **MultiShop2Model**, each line lists all reference garment paths first, followed by the target person path. Web-collected model images are stored under the corresponding task folder and numbered sequentially, e.g. `multi_view/web/0001.png` for Shop2MultiView and `multi_human/web/0001.png` for Shop2MultiModel.
 
 ---
 
