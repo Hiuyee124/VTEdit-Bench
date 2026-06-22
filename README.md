@@ -46,8 +46,9 @@ VTEdit-Bench covers progressively more challenging settings, including multi-vie
 
 ## News
 
-- `[2026/06]` VTEdit-Bench is accepted by ECCV 2026.
-- `[2026/06]` Dataset lists, auxiliary conditions, and supplementary data are released.
+- [x] `[2026/06]` VTEdit-Bench is accepted by ECCV 2026.
+- [x] `[2026/06]` Dataset lists, auxiliary conditions, and supplementary data are released.
+- [ ] Release testing scripts. **Coming soon.**
 
 
 ---
