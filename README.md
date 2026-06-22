@@ -94,9 +94,7 @@ For images derived from existing datasets, please download the original data fro
 
 ### Released Google Drive Package
 
-We provide the benchmark data and pair lists through Google Drive:
- [Google Drive](https://drive.google.com/drive/folders/1qXm7TrUULpaR1dLVeD9zekeMR6oiQyjZ?usp=sharing)
-. The released package is organized as **one subfolder per data source**, with **five task-level pair list files** at the root. Each `{task}_pairs.txt` specifies how to read the test pairs for the corresponding benchmark task from the subfolders below.
+We provide the benchmark data and pair lists through [Google Drive](https://drive.google.com/drive/folders/1qXm7TrUULpaR1dLVeD9zekeMR6oiQyjZ?usp=sharing). The released package is organized as **one subfolder per data source**, with **five task-level pair list files** at the root. Each `{task}_pairs.txt` specifies how to read the test pairs for the corresponding benchmark task from the subfolders below. For access to the complete dataset, please contact us.
 
 #### Package Layout
 
@@ -123,8 +121,8 @@ VTEdit-bench/
 | **Dresscode/** | [DressCode](https://github.com/aimagelab/dress-code) | Shop and indoor model images for `upper_body`, `lower_body`, and `dresses`; auxiliary conditions (e.g., agnostic masks, cloth masks) where applicable |
 | **VITONHD/** | [VITON-HD](https://github.com/shadow2496/VITON-HD) | High-resolution paired model and garment images under `train/` |
 | **streetvton/** | [StreetVTON](https://github.com/cuiaiyu/street-tryon-benchmark) | Outdoor model images, annotations, and StreetVTON–VITON-HD cross-dataset pairs |
-| **multi_view/** | [DeepFashion](https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) + DressCode + web supplement | Multi-view human images, corresponding DressCode garment references, and web-collected models under `web/` |
-| **multi_human/** | DeepFashion + DressCode + web supplement | Multi-person human images, corresponding DressCode garment references, and web-collected models under `web/` |
+| **multi_view/** | [DeepFashion](https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) + DressCode + web supplement | Multi-view human images, corresponding DressCode garment references |
+| **multi_human/** | DeepFashion + DressCode + web supplement | Multi-person human images, corresponding DressCode garment references |
 | **dresscodeMR/** | [DressCode-MR](https://huggingface.co/datasets/zhengchong/DressCode-MR) | Person images, multi-item reference garments, and task-specific annotations |
 
 > **Note:** For images derived from public datasets, please also download the original data from the official sources listed above when required.
@@ -141,7 +139,7 @@ Each root-level `{task}_pairs.txt` is the entry point for loading test pairs of 
 | **Model2Model** | `model2model_pairs.txt` | VITONHD, streetvton |
 | **MultiShop2Model** | `multishop2model_pairs.txt` | dresscodeMR |
 
-For most tasks, each line in a pair list contains two paths separated by whitespace (**garment/cloth first, model/person second**). Paths are relative to the `VTEdit-bench/` package root. For **MultiShop2Model**, each line lists all reference garment paths first, followed by the target person path. Web-collected model images are stored under the corresponding task folder and numbered sequentially, e.g. `multi_view/web/0001.png` for Shop2MultiView and `multi_human/web/0001.png` for Shop2MultiModel.
+For most tasks, each line in a pair list contains two paths separated by whitespace (**garment/cloth first, model/person second**). Paths are relative to the `VTEdit-bench/` package root. For **MultiShop2Model**, each line lists all reference garment paths first, followed by the target person path. 
 
 ---
 
@@ -149,14 +147,14 @@ For most tasks, each line in a pair list contains two paths separated by whitesp
 
 Specialized VTON models often require task-specific auxiliary inputs. To enable fair comparison, we provide the following conditions within the corresponding data source subfolders when applicable.
 
-| Condition | Description | Typical Location |
-|---|---|---|
-| **OpenPose / DWPose** | Human keypoint annotations | `dwpose/`, `annos/` |
-| **Human Parse** | Semantic human parsing maps | `image-parse-v3/`, `annotations/atr/`, `annotations/lip/` |
-| **DensePose** | Dense human body correspondence maps | `image-densepose/`, `annotations/densepose/` |
-| **Agnostic Mask** | Binary mask that removes clothing regions from the model image | `agnostic_masks/`, `agnostic-mask/` |
-| **Human Agnostic** | Human image with target clothing region masked out | `agnostic-v3.2/`, `agnostic/` |
-| **Cloth Mask** | Binary mask of the garment image | `cloth-mask/`, `cloth/` |
+| Condition | Description | 
+|---|---|
+| **OpenPose / DWPose** | Human keypoint annotations | 
+| **Human Parse** | Semantic human parsing maps | 
+| **DensePose** | Dense human body correspondence maps | 
+| **Agnostic Mask** | Binary mask that removes clothing regions from the model image | 
+| **Human Agnostic** | Human image with target clothing region masked out |
+| **Cloth Mask** | Binary mask of the garment image | 
 
 ---
 
